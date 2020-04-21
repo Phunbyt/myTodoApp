@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(100deg, #f00, #7366ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+header h1 span {
+    text-transform: capitalize;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .todo-item-input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+}
+
+form .todo-item-input::placeholder {
+    color: #f00851;
+}
+
+form button {
+    height: 30px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 0px;
+    outline: none;
+    font-size: 20px;
+    background-color: #f00851;
+    color: #7366ff;
+}
+
+form button:hover {
+    color: #f00851;
+    background-color: #7366ff;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    width: 350px;
+    transition: all 1s ease;
+}
+
+ul div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 4px;
+    transition: all 0.5s ease;
+}
+
+ul div li {
+    flex: 1;
+    padding: 2px 4px;
+    font-size: 15px;
+}
+
+ul div button {
+    padding: 2px 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+ul div .completedBtn {
+    background-color: #0cb466;
+    color: #fff;
+}
+
+ul div .completedBtn:hover {
+    background-color: #077e46;
+    color: rgb(195, 194, 194);
+}
+
+ul div .deletedBtn {
+    background-color: #f00851;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+ul div .deletedBtn:hover {
+    background-color: #a00435;
+    color: rgb(195, 194, 194);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.taskComplete {
+    background-color: #10bd58;
+    opacity: 0.5;
+    color: rgb(228, 222, 222);
+}
+
+.taskDelete {
+    transform: rotateX(90deg);
+    background-color: #a00435;
+    opacity: 0.5;
+    color: rgb(228, 222, 222);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+
+
+/* Custom Select */
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #f00851;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    padding: 2px;
+}
+
+
+/* Arrow */
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    background: #f00851;
+    cursor: pointer;
+    pointer-events: none;
+}
